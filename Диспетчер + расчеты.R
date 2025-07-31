@@ -1,4 +1,4 @@
-# 4) Диспетчер, который смотрит на NA и вызывает нужную функцию
+# диспетчер, который смотрит на NA и вызывает нужную функцию
 compute_nernst <- function(ion, Cin = NA_real_, Cout = NA_real_, Ei = NA_real_, T = 310.15) {
   if (!ion %in% names(z_vals)) 
     stop("Неизвестный ион: ", ion)
@@ -16,7 +16,7 @@ compute_nernst <- function(ion, Cin = NA_real_, Cout = NA_real_, Ei = NA_real_, 
   stop("Невозможно определить, что считать: проверьте, какие значения NA.")
 }
 
-# 5) Подготовим датафрейм (предполагается, что вы уже прочитали ion_data)
+# подготовим data.frame - ниже то, как загружала я, но ваш может отличаться
 # ion_data <- read.csv("ion_data_with_z.csv", na.strings="NA", stringsAsFactors=FALSE)
 
 ion_data$Result <- NA_real_
